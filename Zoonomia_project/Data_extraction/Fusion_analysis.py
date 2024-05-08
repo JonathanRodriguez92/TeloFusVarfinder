@@ -14,6 +14,7 @@ Total_fusions_0 Total inward and outward fusions with distance 0
 Total_fusions Total of all fusions inward + outward 
 Total_inward Total fusions inward 0 + other
 Total_outward Total fusions outward 0 + other
+Genome_coverage: A coverage calculate from the run used. Genome coverage = (Total reads per run * bp read )/(genome size )
 
 Usage:
 ------
