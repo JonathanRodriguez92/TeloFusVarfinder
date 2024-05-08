@@ -14,7 +14,7 @@ Usage:
 ------
 
 command line:
-python Extraction_gene_to_gene_information.py
+python Extraction_gene_information.py
 
 Dependencies:
 -------------
@@ -27,7 +27,7 @@ Dependencies:
 Author:
 ------
     - Author: Jonatan Rodriguez del Valle
-    - Date: 15-March-2024    
+    - Date: 16-March-2024    
 
 """
 
