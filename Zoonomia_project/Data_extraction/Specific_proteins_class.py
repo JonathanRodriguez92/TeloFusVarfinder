@@ -12,7 +12,7 @@ Usage:
 ------
 
 command line:
-python Specific_protein_class.py
+python Specific_proteins_class.py
 
 Dependencies:
 -------------
@@ -29,6 +29,8 @@ Author:
 
 import pandas as pd
 import os
+
+#Variables definition
 
 excel_file = "zoonomia_sp_info.xlsx"
 df = pd.read_excel(excel_file)
@@ -74,7 +76,7 @@ for tsv_folder in tsv_folders:
                             #if column_name_1 not in df.columns:
                             #        df[column_name_1] = None
                             #df.loc[index, column_name_1] = orthology_class
-                            
+
                             # it looks for the gene_class found in loss_summ_data.tsv which could be I, PI, UL and so on 
                             # and the added to the value of the column previously named
 
