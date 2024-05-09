@@ -10,7 +10,7 @@ TeloFusVarfinder is a powerful tool designed for the analysis of telomere variab
 - **Telomere Fusion Detection:** Identifies potential telomere fusion events and provides relevant data for further analysis.
 - **Telomere Variability Analysis:** The tool allows for the investigation of different telomere motifs and their frequencies in the genome.
 - **Data Management:** Efficiently handles raw data, processes CSV files, and merges data across different files and species.
-- 
+  
 ### Telomere Fusion Detection
 
 The process of telomere fusion detection in TeloFusVarfinder involves several key functions and methodologies:
