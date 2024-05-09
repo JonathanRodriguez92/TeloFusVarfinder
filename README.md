@@ -85,7 +85,7 @@ The process to download SRR files from sra-toolkits prefetch, fastq-dump and fil
 
 Here are the main scripts in this repository and their descriptions:
 
-- **[Telo_fusion_process.py](link-to-script)**: 
+- **[Telo_fusion_process.py](Telo_fusion_process.py)**: 
     - Description: Handles telomere fusion detection, including circular rotation function, local alignment using the `PairwiseAligner` with specified parameters, merging coordinates to find fusions from BED files, and searching FASTA sequences to create a new FASTA file.
     - [View the script](link-to-script)
   
