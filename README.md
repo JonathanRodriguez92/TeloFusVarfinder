@@ -1,2 +1,49 @@
 # TeloFusVarfinder
 A tool to search telomere variability and fusions in the genome
+
+## Overview
+
+TeloFusVarfinder is a powerful tool designed for the analysis of telomere variability and potential telomere fusions within genomes. This tool facilitates the examination of telomere motifs, their variants, and potential fusion events by providing streamlined data processing and analysis functionalities.
+
+## Features
+
+- **Telomere Variability Analysis:** The tool allows for the investigation of different telomere motifs and their frequencies in the genome.
+- **Telomere Fusion Detection:** Identifies potential telomere fusion events and provides relevant data for further analysis.
+- **Data Management:** Efficiently handles raw data, processes CSV files, and merges data across different files and species.
+
+## File Descriptions
+
+The project consists of several Python scripts that provide different aspects of telomere variability and fusion analysis:
+
+- **Telo_fusion_process.py:** This script is responsible for detecting potential telomere fusions in the genome. It processes data to identify and analyze possible fusion events.
+  
+- **Telo_motif_process.py:** This script analyzes the variability of telomere motifs in the genome. It processes CSV files to extract information about telomere motifs and variants, then creates summary Excel files with the relevant data.
+  
+- **SRR_download_process.py:** This script handles the downloading of raw data from the Sequence Read Archive (SRA) for analysis. It ensures that the required data is available for further processing.
+
+## Getting Started
+
+To use TeloFusVarfinder, follow these steps:
+
+1. **Set Up Your Environment:**
+    - Make sure you have Python 3.x installed on your machine.
+    - Install necessary dependencies using `pip` or your preferred package manager.
+
+2. **Download the Scripts:**
+    - Clone the repository or download the scripts directly to your project directory.
+
+3. **Prepare Your Data:**
+    - Organize your data files (CSV, Excel) in the appropriate directory as per the script requirements.
+
+4. **Run the Scripts:**
+    - Execute the scripts (`Telo_fusion_process.py`, `Telo_motif_process.py`, and `SRR_download_process.py`) in the desired sequence depending on your analysis needs.
+
+5. **Review the Results:**
+    - The scripts will produce Excel files with the analyzed data. Review these files to gain insights into telomere variability and potential fusion events.
+
+## Contact
+
+For questions, feedback, or support, please contact [your email address].
+
+Enjoy using TeloFusVarfinder for your genome analysis!
+
