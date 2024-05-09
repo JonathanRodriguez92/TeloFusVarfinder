@@ -24,7 +24,7 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
     - `min_score = 17` 
     
     These parameters allow for the identification of potential fusions with high sensitivity while providing a slightly flexibility in matching (1 mismatch).
-  Inputs:
+  `Inputs:`
     - Circular rotations: A pattern created in the circular_rotation function
     - Pattern: A simple pattern to detect potencial reads
     - Direction: Forward or reverse depending of what you analyse
