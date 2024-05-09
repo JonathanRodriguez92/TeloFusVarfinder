@@ -89,11 +89,11 @@ Here are the main scripts in this repository and their descriptions:
     - Description: Handles telomere fusion detection, including circular rotation function, local alignment using the `PairwiseAligner` with specified parameters, merging coordinates to find fusions from BED files, and searching FASTA sequences to create a new FASTA file.
     - [View the script](link-to-script)
   
-- **[Telo_motif_process.py](link-to-script)**:
+- **[Telo_motif_process.py](Telo_motif_process.py)**:
     - Description: Manages telomere variability analysis, including functions for comparing sequences for similarity and searching for telomeric variants.
     - [View the script](link-to-script)
   
-- **[SRR_download_process.py](link-to-script)**:
+- **[SRR_download_process.py](SRR_download_process.py)**:
     - Description: Responsible for downloading and filtering data.
     - [View the script](link-to-script)
 
