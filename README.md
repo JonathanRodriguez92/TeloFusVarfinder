@@ -11,7 +11,7 @@ TeloFusVarfinder is a powerful tool designed for the analysis of telomere variab
 - **Telomere Variability Analysis:** The tool allows for the investigation of different telomere motifs and their frequencies in the genome.
 - **Data Management:** Efficiently handles raw data, processes CSV files, and merges data across different files and species.
   
-### Telomere Fusion Detection
+### Telomere Fusion Detection `TeloFusProcessor` 
 
 The process of telomere fusion detection in TeloFusVarfinder involves several key functions and methodologies:
 
@@ -51,53 +51,82 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
     - Fusion coordinates: A dictionary which reads the csv table and coordinates the data previously calculated.
     - Fastq_file: To look for the reads and store them in a fasta file
   - Outputs:
-    - Fasta file 
-
+    - Fasta file
+      
 - **`candidate_fus` Function:** The main function called ties all of these processes together to facilitate the search for telomere fusions. It manages the overall workflow, ensuring that each function is called in the correct sequence to efficiently identify potential fusions within the genome. At the end Bed files are delected to free space.
-- 
-### Telomere Variability Analysis
+  
+### Telomere Variability Analysis `TelomericVariantSearcher`
 
 The process of telomere variability analysis in TeloFusVarfinder involves two key functions:
 
 - **`are_similar` Function:** This function compares two sequences to determine their similarity. It accepts two sequences as input and a maximum allowed difference (`max_error`). The function computes the number of differing characters between the sequences and returns a boolean indicating whether the difference is within the specified error threshold. This function helps identify telomeric variants that closely match a reference sequence.
 
 - **`search_telomeric_variants` Function:** This function is responsible for searching telomeric variants within the genome data. It scans through sequence data, utilizing the `are_similar` function to identify sequences that closely resemble known telomeric motifs. The function can handle large datasets and generate insights into the distribution and frequency of different telomeric motifs across various species.
+  - Input:
+    - min_frequency: A threshold which stores the data with a minimun frequency (e.g: 1)
+    - fastq_file: Fastq_file to analyse
+    - number: A number to diferenciates the output file name with others.
+  - Output:
+    - A CSV file with
+      - ID: the ID of the read or scaffold analysed
+      - TelomereMotif: The original motif analysed (e.g: TTAGGG).
+      - Variant: The variant analysed from the original motif with max_errors permitted.
+      - Frequency: How many times appear the motif in the read and do not overlaps.
+      - PorcentageTelomereSequence: How big in porcentage is the motif/variant appearing in the read (e.g: 30% of TTAGGG).
+      - Length: Total length of the read.
 
 Together, these functions enable the tool to provide comprehensive insights into telomere variability across different genomes and species. By identifying telomeric variants and their frequencies, users can gain valuable information about telomere structure and potential areas for further investigation.
 
-## File Descriptions
+### Data Management `SrrDownloader`
 
-The project consists of several Python scripts that provide different aspects of telomere variability and fusion analysis:
+The process to download SRR files from sra-toolkits prefetch, fastq-dump and filtration with fastq_quality_filter.
 
-- **Telo_fusion_process.py:** This script is responsible for detecting potential telomere fusions in the genome. It processes data to identify and analyze possible fusion events.
+## Scripts
+
+Here are the main scripts in this repository and their descriptions:
+
+- **[Telo_fusion_process.py](link-to-script)**: 
+    - Description: Handles telomere fusion detection, including circular rotation function, local alignment using the `PairwiseAligner` with specified parameters, merging coordinates to find fusions from BED files, and searching FASTA sequences to create a new FASTA file.
+    - [View the script](link-to-script)
   
-- **Telo_motif_process.py:** This script analyzes the variability of telomere motifs in the genome. It processes CSV files to extract information about telomere motifs and variants, then creates summary Excel files with the relevant data.
+- **[Telo_motif_process.py](link-to-script)**:
+    - Description: Manages telomere variability analysis, including functions for comparing sequences for similarity and searching for telomeric variants.
+    - [View the script](link-to-script)
   
-- **SRR_download_process.py:** This script handles the downloading of raw data from the Sequence Read Archive (SRA) for analysis. It ensures that the required data is available for further processing.
+- **[SRR_download_process.py](link-to-script)**:
+    - Description: Responsible for downloading and filtering data.
+    - [View the script](link-to-script)
 
 ## Getting Started
 
 To use TeloFusVarfinder, follow these steps:
 
 1. **Set Up Your Environment:**
-    - Make sure you have Python 3.x installed on your machine.
+    - Make sure you have Python 3.12 installed on your machine.
     - Install necessary dependencies using `pip` or your preferred package manager.
+    - **All depencdices are here**
+    - [see the script](link-to-script)
 
 2. **Download the Scripts:**
     - Clone the repository or download the scripts directly to your project directory.
 
 3. **Prepare Your Data:**
-    - Organize your data files (CSV, Excel) in the appropriate directory as per the script requirements.
+    - Organize your data files.
+      - A table which has columns called
+        - Species
+        - srr_number
+          
+      - Your own motifs and patterns to analyse 
 
 4. **Run the Scripts:**
-    - Execute the scripts (`Telo_fusion_process.py`, `Telo_motif_process.py`, and `SRR_download_process.py`) in the desired sequence depending on your analysis needs.
-
-5. **Review the Results:**
-    - The scripts will produce Excel files with the analyzed data. Review these files to gain insights into telomere variability and potential fusion events.
+    - Execute the scripts Telomere_analysis.py and whichs parallelizes all the scripts in one (`Telo_fusion_process.py`, `Telo_motif_process.py`, and `SRR_download_process.py`).
+    - Important: The script was runned in a cluster, so the end of it should be modified to ensure you can use it other computers
+    - [see the script](link-to-script)
+      
 
 ## Contact
 
-For questions, feedback, or support, please contact [your email address].
+For questions, feedback, or support, please contact jonatan.rodriguez@estudiante.uam.es.
 
 Enjoy using TeloFusVarfinder for your genome analysis!
 
