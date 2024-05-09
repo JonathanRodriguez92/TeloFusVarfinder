@@ -95,7 +95,7 @@ Here are the main scripts in this repository and their descriptions:
   
 - **[SRR_download_process.py](SRR_download_process.py)**:
     - Description: Responsible for downloading and filtering data.
-    - [View the script](link-to-script)
+    - [View the script]([link-to-script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/a8b36d2f228cee7212a8d6f4bfeb888119aee90c/SRR_download_process.py))
 
 ## Getting Started
 
