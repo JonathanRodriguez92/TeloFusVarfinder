@@ -105,7 +105,7 @@ To use TeloFusVarfinder, follow these steps:
     - Make sure you have Python 3.12 installed on your machine.
     - Install necessary dependencies using `pip` or your preferred package manager.
     - **All depencdices are here**
-    - [see the script](link-to-script)
+    - [see the script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/e79e59c390402ca8c2273e304a654428488712fa/miniconda_env_lib.sh)
 
 2. **Download the Scripts:**
     - Clone the repository or download the scripts directly to your project directory.
