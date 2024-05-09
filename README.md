@@ -7,31 +7,35 @@ TeloFusVarfinder is a powerful tool designed for the analysis of telomere variab
 
 ## Features
 
-- **Telomere Variability Analysis:** The tool allows for the investigation of different telomere motifs and their frequencies in the genome.
 - **Telomere Fusion Detection:** Identifies potential telomere fusion events and provides relevant data for further analysis.
+- **Telomere Variability Analysis:** The tool allows for the investigation of different telomere motifs and their frequencies in the genome.
 - **Data Management:** Efficiently handles raw data, processes CSV files, and merges data across different files and species.
+- 
 ### Telomere Fusion Detection
 
 The process of telomere fusion detection in TeloFusVarfinder involves several key functions and methodologies:
 
-- **Circular Rotation Function:** This function is crucial for detecting telomere fusions as it enables the circular rotation of sequences. This allows for the identification of potential fusion events even when they span the end and beginning of linear sequences.
+- **Circular Rotation Function:** This function is crucial for detecting telomere fusions as it enables the circular rotation of sequences. This allows for the identification of potential fusion, even thought the principal motif is TTAGGG or CCCTAA the fusion point of the telomere could be any permutation as the shortening of the telomere could ocurr in any base. 
 
-- **Process Pattern with Local Alignment:** This function leverages the `PairwiseAligner` class from the `Bio.pairwise2` module to perform local alignment on patterns. The alignment is configured with the following parameters:
+- **Process Pattern with Local Alignment:** This function leverages the `PairwiseAligner` class from the `Bio.Align` module to perform local alignment on patterns and stores the data in 2 bed files forward and reverse. The alignment is configured with the following parameters:
     - `mismatch_penalty = 0`
     - `gap_open_penalty = -1`
     - `gap_extend_penalty = -1`
-    - `min_score = 17`
+    - `min_score = 17` 
     
-    These parameters allow for the identification of potential fusions with high sensitivity while providing flexibility in matching.
+    These parameters allow for the identification of potential fusions with high sensitivity while providing a slightly flexibility in matching (1 mismatch).
+  Inputs:
+    - Circular rotations: A pattern created in the circular_rotation function
+    - Pattern: A simple pattern to detect potencial reads
+    - Direction: Forward or reverse depending of what you analyse
+    - Bed file: The name of the bed file, the project choosed {specie}_{direction}.bed
+    - Fastq file: The file to analyse
+      
+- **Merge Coordinates Function:** The `merge_coord` function processes BED files forward and reverse to identify potential fusion events by . It merges coordinates with the same ID from different files to provide a comprehensive view of potential fusions.
 
-- **Merge Coordinates Function:** The `merge_coordinates` function processes BED files to identify potential fusion events. It merges overlapping coordinates from different files to provide a comprehensive view of potential fusions.
-
-- **Fusion Coordinates Function:** This function is responsible for searching through FASTA sequence data and creating a new FASTA file containing the sequences of interest. It uses the coordinates identified in the `merge_coordinates` function to extract the sequences related to potential fusions.
+- **Fusion Coordinates Function:** This function is responsible for searching through FASTA sequence data and creating a new FASTA file containing the sequences of interest. It uses the coordinates identified in the `merge_coord` function to extract the sequences related to potential fusions.
 
 - **Main Function:** The main function ties all of these processes together to facilitate the search for telomere fusions. It manages the overall workflow, ensuring that each function is called in the correct sequence to efficiently identify potential fusions within the genome.
-
-Together, these functions provide a comprehensive and efficient approach to detecting telomere fusions, enabling users to gain valuable insights into potential fusion events and their implications.
-
 
 ## File Descriptions
 
