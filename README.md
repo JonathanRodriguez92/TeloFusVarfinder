@@ -91,11 +91,11 @@ Here are the main scripts in this repository and their descriptions:
   
 - **[Telo_motif_process.py](Telo_motif_process.py)**:
     - Description: Manages telomere variability analysis, including functions for comparing sequences for similarity and searching for telomeric variants.
-    - [View the script]([link-to-script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/3b199b1d46f3c0bce1ce718c241652ab3d02ce50/Telo_motif_process.py))
+    - [View the script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/3b199b1d46f3c0bce1ce718c241652ab3d02ce50/Telo_motif_process.py)
   
 - **[SRR_download_process.py](SRR_download_process.py)**:
     - Description: Responsible for downloading and filtering data.
-    - [View the script]([link-to-script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/a8b36d2f228cee7212a8d6f4bfeb888119aee90c/SRR_download_process.py))
+    - [View the script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/a8b36d2f228cee7212a8d6f4bfeb888119aee90c/SRR_download_process.py)
 
 ## Getting Started
 
@@ -121,7 +121,7 @@ To use TeloFusVarfinder, follow these steps:
 4. **Run the Scripts:**
     - Execute the scripts Telomere_analysis.py and whichs parallelizes all the scripts in one (`Telo_fusion_process.py`, `Telo_motif_process.py`, and `SRR_download_process.py`).
     - Important: The script was runned in a cluster, so the end of it should be modified to ensure you can use it other computers
-    - [see the script]([link-to-script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/892fd542f1347c6d50d0b80235fc15faf33c8970/Telomere_analysis.py))
+    - [see the script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/892fd542f1347c6d50d0b80235fc15faf33c8970/Telomere_analysis.py)
       
 
 ## Contact
