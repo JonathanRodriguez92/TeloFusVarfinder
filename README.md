@@ -104,7 +104,7 @@ To use TeloFusVarfinder, follow these steps:
 1. **Set Up Your Environment:**
     - Make sure you have Python 3.12 installed on your machine.
     - Install necessary dependencies using `pip` or your preferred package manager.
-    - **All depencdices are here**
+  - **All depencdices are here:**
     - [see the script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/e79e59c390402ca8c2273e304a654428488712fa/miniconda_env_lib.sh)
 
 2. **Download the Scripts:**
@@ -115,12 +115,11 @@ To use TeloFusVarfinder, follow these steps:
       - A table which has columns called
         - Species
         - srr_number
-          
       - Your own motifs and patterns to analyse 
 
 4. **Run the Scripts:**
-    - Execute the scripts Telomere_analysis.py and whichs parallelizes all the scripts in one (`Telo_fusion_process.py`, `Telo_motif_process.py`, and `SRR_download_process.py`).
-    - Important: The script was runned in a cluster, so the end of it should be modified to ensure you can use it other computers
+    - Execute the script Telomere_analysis.py whichs parallelizes all the scripts in one (`Telo_fusion_process.py`, `Telo_motif_process.py`, and `SRR_download_process.py`).
+    - Important: The script was runned in a cluster, so the end of it should be modified to ensure the use in other computers
     - [see the script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/892fd542f1347c6d50d0b80235fc15faf33c8970/Telomere_analysis.py)
       
 
