@@ -87,7 +87,7 @@ Here are the main scripts in this repository and their descriptions:
 
 - **[Telo_fusion_process.py](Telo_fusion_process.py)**: 
     - Description: Handles telomere fusion detection, including circular rotation function, local alignment using the `PairwiseAligner` with specified parameters, merging coordinates to find fusions from BED files, and searching FASTA sequences to create a new FASTA file.
-    - [View the script]()
+    - [View the script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/4dd5a032f68f10269ed0521ab7bc86b334ee53a8/Telo_fusion_process.py)
   
 - **[Telo_motif_process.py](Telo_motif_process.py)**:
     - Description: Manages telomere variability analysis, including functions for comparing sequences for similarity and searching for telomeric variants.
