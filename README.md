@@ -44,7 +44,7 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
     - Max_distance: The maximum distance permitted between patterns (e.g.: if 20 is the maximum distance permitted and the distance between pattern is 10 the fusion would look like TTAGGGTTAGGGxxxxxxxxxxCCCTAACCTAA where x is a random base)
       
   - Outputs:
-    -  A CSV table with fusion details: ID, coordinates, type of fusion Inward(forward-reverse) or Outward(reverse-forward), total score selected
+    -  A CSV table with fusion details: ID, coordinates, type of fusion Inward(forward-reverse) or Outward(reverse-forward) and total score of the fusion
 
 - **Fusion Coordinates Function:** This function is responsible for searching through FASTA sequence data and creating a new FASTA file containing the sequences of interest. It uses the coordinates identified in the `merge_coord` function to extract the sequences related to potential fusions.
   - Inputs:
@@ -53,7 +53,17 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
   - Outputs:
     - Fasta file 
 
-- **Main Function:** The main function ties all of these processes together to facilitate the search for telomere fusions. It manages the overall workflow, ensuring that each function is called in the correct sequence to efficiently identify potential fusions within the genome.
+- **Main Function:** The main function called candidate_fus ties all of these processes together to facilitate the search for telomere fusions. It manages the overall workflow, ensuring that each function is called in the correct sequence to efficiently identify potential fusions within the genome. At the end Bed files are delected to free space.
+- 
+### Telomere Variability Analysis
+
+The process of telomere variability analysis in TeloFusVarfinder involves two key functions:
+
+- **`are_similar` Function:** This function compares two sequences to determine their similarity. It accepts two sequences as input and a maximum allowed difference (`max_error`). The function computes the number of differing characters between the sequences and returns a boolean indicating whether the difference is within the specified error threshold. This function helps identify telomeric variants that closely match a reference sequence.
+
+- **`search_telomeric_variants` Function:** This function is responsible for searching telomeric variants within the genome data. It scans through sequence data, utilizing the `are_similar` function to identify sequences that closely resemble known telomeric motifs. The function can handle large datasets and generate insights into the distribution and frequency of different telomeric motifs across various species.
+
+Together, these functions enable the tool to provide comprehensive insights into telomere variability across different genomes and species. By identifying telomeric variants and their frequencies, users can gain valuable information about telomere structure and potential areas for further investigation.
 
 ## File Descriptions
 
