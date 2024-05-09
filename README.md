@@ -121,7 +121,7 @@ To use TeloFusVarfinder, follow these steps:
 4. **Run the Scripts:**
     - Execute the scripts Telomere_analysis.py and whichs parallelizes all the scripts in one (`Telo_fusion_process.py`, `Telo_motif_process.py`, and `SRR_download_process.py`).
     - Important: The script was runned in a cluster, so the end of it should be modified to ensure you can use it other computers
-    - [see the script](link-to-script)
+    - [see the script]([link-to-script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/892fd542f1347c6d50d0b80235fc15faf33c8970/Telomere_analysis.py))
       
 
 ## Contact
