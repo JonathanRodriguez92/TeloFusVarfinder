@@ -30,6 +30,8 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
     - Direction: Forward or reverse depending of what you analyse
     - Bed file: The name of the bed file, the project choosed {specie}_{direction}.bed
     - Fastq file: The file to analyse
+  - outputs:
+    - Bed file: Project case was {Specie}{direction}{number}.bed as it could be for R1 or R2.  
       
 - **Merge Coordinates Function:** The `merge_coord` function processes BED files forward and reverse to identify potential fusion events by . It merges coordinates with the same ID from different files to provide a comprehensive view of potential fusions.
 
