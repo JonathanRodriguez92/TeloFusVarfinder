@@ -91,7 +91,7 @@ Here are the main scripts in this repository and their descriptions:
   
 - **[Telo_motif_process.py](Telo_motif_process.py)**:
     - Description: Manages telomere variability analysis, including functions for comparing sequences for similarity and searching for telomeric variants.
-    - [View the script](link-to-script)
+    - [View the script]([link-to-script](https://github.com/JonathanRodriguez92/TeloFusVarfinder/blob/3b199b1d46f3c0bce1ce718c241652ab3d02ce50/Telo_motif_process.py))
   
 - **[SRR_download_process.py](SRR_download_process.py)**:
     - Description: Responsible for downloading and filtering data.
