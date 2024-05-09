@@ -44,9 +44,14 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
     - Max_distance: The maximum distance permitted between patterns (e.g.: if 20 is the maximum distance permitted and the distance between pattern is 10 the fusion would look like TTAGGGTTAGGGxxxxxxxxxxCCCTAACCTAA where x is a random base)
       
   - Outputs:
-    -  A table with fusion details: ID, coordinates, type of fusion Inward(forward-reverse) or Outward(reverse-forward), total score selected
+    -  A CSV table with fusion details: ID, coordinates, type of fusion Inward(forward-reverse) or Outward(reverse-forward), total score selected
 
 - **Fusion Coordinates Function:** This function is responsible for searching through FASTA sequence data and creating a new FASTA file containing the sequences of interest. It uses the coordinates identified in the `merge_coord` function to extract the sequences related to potential fusions.
+  - Inputs:
+    -Fusion coordinates: A dictionary which reads the csv table and coordinates the data previously calculated.
+    -Fastq_file: To look for the reads and store them in a fasta file
+  - Outputs:
+    -Fasta file 
 
 - **Main Function:** The main function ties all of these processes together to facilitate the search for telomere fusions. It manages the overall workflow, ensuring that each function is called in the correct sequence to efficiently identify potential fusions within the genome.
 
