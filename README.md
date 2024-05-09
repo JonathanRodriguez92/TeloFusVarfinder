@@ -15,13 +15,13 @@ TeloFusVarfinder is a powerful tool designed for the analysis of telomere variab
 
 The process of telomere fusion detection in TeloFusVarfinder involves several key functions and methodologies:
 
-- **Circular Rotation Function:** This function is crucial for detecting telomere fusions as it enables the circular rotation of sequences. This allows for the identification of potential fusion, even thought the principal motif is TTAGGG or CCCTAA the fusion point of the telomere could be any permutation as the shortening of the telomere could ocurr in any base.
+- **`Circular_rotations` Function:** This function is crucial for detecting telomere fusions as it enables the circular rotation of sequences. This allows for the identification of potential fusion, even thought the principal motif is TTAGGG or CCCTAA the fusion point of the telomere could be any permutation as the shortening of the telomere could ocurr in any base.
   - Inputs:
     - Pattern: In the zoonomia project was TTAGGGTTAGGGTTAGGG and CCCTAACCCTAACCCTAA
   - Outputs:
     - A list of patterns with their posible circular permutations   
 
-- **Process Pattern with Local Alignment:** This function leverages the `PairwiseAligner` class from the `Bio.Align` module to perform local alignment on patterns and stores the data in 2 bed files forward and reverse. The alignment is configured with the following parameters:
+- **`Process_pattern` Function:** This function leverages the `PairwiseAligner` class from the `Bio.Align` module to perform local alignment on patterns and stores the data in 2 bed files forward and reverse. The alignment is configured with the following parameters:
     - `mismatch_penalty = 0`
     - `gap_open_penalty = -1`
     - `gap_extend_penalty = -1`
@@ -37,7 +37,7 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
   - Outputs:
     - Bed file: Project case was {Specie}{direction}{number}.bed as it could be for R1 or R2.  
       
-- **Merge Coordinates Function:** The `merge_coord` function processes 2 BED files (forward and reverse) to identify potential fusion events by analysing the distance between patterns. It merges coordinates with the same ID from different files to provide a comprehensive view of potential fusions..
+- **`Merge_coord` Function:** The `merge_coord` function processes 2 BED files (forward and reverse) to identify potential fusion events by analysing the distance between patterns. It merges coordinates with the same ID from different files to provide a comprehensive view of potential fusions..
   - Inputs:
     - Coord_dict: A dictionary that involves the coordinates with the same ID previously calculated.
     - Data: An empty list
@@ -46,14 +46,14 @@ The process of telomere fusion detection in TeloFusVarfinder involves several ke
   - Outputs:
     -  A CSV table with fusion details: ID, coordinates, type of fusion Inward(forward-reverse) or Outward(reverse-forward) and total score of the fusion
 
-- **Fusion Coordinates Function:** This function is responsible for searching through FASTA sequence data and creating a new FASTA file containing the sequences of interest. It uses the coordinates identified in the `merge_coord` function to extract the sequences related to potential fusions.
+- **`Fusion_coord` Function:** This function is responsible for searching through FASTA sequence data and creating a new FASTA file containing the sequences of interest. It uses the coordinates identified in the `merge_coord` function to extract the sequences related to potential fusions.
   - Inputs:
     - Fusion coordinates: A dictionary which reads the csv table and coordinates the data previously calculated.
     - Fastq_file: To look for the reads and store them in a fasta file
   - Outputs:
     - Fasta file 
 
-- **Main Function:** The main function called candidate_fus ties all of these processes together to facilitate the search for telomere fusions. It manages the overall workflow, ensuring that each function is called in the correct sequence to efficiently identify potential fusions within the genome. At the end Bed files are delected to free space.
+- **`candidate_fus` Function:** The main function called ties all of these processes together to facilitate the search for telomere fusions. It manages the overall workflow, ensuring that each function is called in the correct sequence to efficiently identify potential fusions within the genome. At the end Bed files are delected to free space.
 - 
 ### Telomere Variability Analysis
 
