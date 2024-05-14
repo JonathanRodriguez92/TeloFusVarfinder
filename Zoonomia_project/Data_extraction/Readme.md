@@ -263,13 +263,24 @@ pip install pandas numpy
 ```
 ## Folders
 
-###
+### Telo_fus_raw
 
-###
+A folder containing some fusions obtained from TeloFusVarfinder.
 
-###
+### Telo_motif_raw
 
-###
+A folder containing some CSV files with the telomere variability
+
+### Orthologs_human_hg38
+A folder containing TOGA information against the human reference
+- Transcript: e.g: {specie}_OrthologsClassification.tsv
+- Gene: e.g: {specie}loss_summ_data.tsv
+### Orthologs_mouse_mm10
+A folder containing TOGA information against the mouse reference
+- Transcript: e.g: {specie}_OrthologsClassification.tsv
+- Gene: e.g: {specie}loss_summ_data.tsv
+### Results
+All tables generated from the Scripts
 
 ## Acces to the scripts:
 
