@@ -261,6 +261,15 @@ You can install these dependencies using pip:
 pip install pandas numpy
 
 ```
+## Folders
+
+###
+
+###
+
+###
+
+###
 
 ## Acces to the scripts:
 
