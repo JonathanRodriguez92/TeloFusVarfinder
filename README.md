@@ -1,5 +1,5 @@
 # TeloFusVarfinder
-A tool to search telomere variability and fusions in the genome
+A tool to search telomere varian repeats, telomeric content and fusions in the genome
 
 ## Overview
 
